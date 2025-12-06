@@ -149,7 +149,7 @@
 		<!-- Javadoc Comments -->
 		<module name="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocTypeCheck">
 			<property name="scope" value="package"/>
-			<property name="authorFormat" value=".+\s.+"/>
+			<property name="authorFormat" value="\S+"/>
 		</module>
 		<module name="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck">
 			<property name="allowMissingParamTags" value="true"/>
@@ -160,6 +160,7 @@
 		</module>
 		<module name="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocStyleCheck">
 			<property name="checkEmptyJavadoc" value="true"/>
+			<property name="endOfSentenceFormat" value="([.?!。][ \t\n\r\f&lt;])|([.?!。]$)"/>
 		</module>
 		<module name="com.puppycrawl.tools.checkstyle.checks.javadoc.NonEmptyAtclauseDescriptionCheck"/>
 		<module name="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocTagContinuationIndentationCheck">
