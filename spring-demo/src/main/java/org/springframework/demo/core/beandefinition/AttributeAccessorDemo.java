@@ -16,6 +16,8 @@
 
 package org.springframework.demo.core.beandefinition;
 
+import java.util.Arrays;
+
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
@@ -25,24 +27,29 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 /**
- * BeanMetadataElement 在 BeanDefinition 中的使用示例。
+ * AttributeAccessor 接口在 BeanDefinition 中使用示例。
  * @author dsy
  * @since 7.0
  */
 @Configuration
-public class BeanMetadataElementDemo {
+public class AttributeAccessorDemo {
 
-	private static final Log log = LogFactory.getLog(BeanMetadataElementDemo.class);
+	private static final Log log = LogFactory.getLog(AttributeAccessorDemo.class);
 
 	public static void main(String[] args) {
 		AnnotationConfigApplicationContext ctx = new AnnotationConfigApplicationContext(BeanMetadataElementDemo.class);
 
 		BeanDefinition bd = ctx.getBeanFactory().getBeanDefinition("myService");
-		Object source = bd.getSource();
-		log.info(String.format("Source = %s", source));
-		log.info(String.format("Source class = %s", (source != null ? source.getClass() : "null")));
+		// 设置属性
+		bd.setAttribute("test", "test1");
+		// 使用 computeAttribute
+		Object lazyValue = bd.computeAttribute("lazyAttr", name -> "computedValue");
 
-		ctx.close();
+		// 输出日志
+		log.info(String.format("Attribute 'test': %s", bd.getAttribute("test")));
+		log.info(String.format("Attribute 'test2' (not set): %s", bd.getAttribute("test2")));
+		log.info(String.format("Attribute 'lazyAttr' computed value: %s", lazyValue));
+		log.info(String.format("All attribute names: %s", Arrays.asList(bd.attributeNames())));
 	}
 
 	@Bean
