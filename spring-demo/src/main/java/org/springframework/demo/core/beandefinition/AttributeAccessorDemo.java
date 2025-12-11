@@ -61,5 +61,7 @@ public class AttributeAccessorDemo {
 		public void hello() {
 			log.info("hello");
 		}
+
 	}
+
 }

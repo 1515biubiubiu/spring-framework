@@ -32,6 +32,7 @@ import org.springframework.context.support.GenericApplicationContext;
 
 /**
  * BeanDefinition 中 scope 相关的示例。
+ *
  * @author dsy
  * @since 7.0
  */
@@ -96,6 +97,7 @@ public class BeanDefinitionScopeDemo {
 		public void hello() {
 			log.info("hello");
 		}
+
 	}
 
 	/**
@@ -142,6 +144,7 @@ public class BeanDefinitionScopeDemo {
 			this.destructionCallbacks.remove();
 			this.threadLocal.remove();
 		}
+
 	}
 
 }

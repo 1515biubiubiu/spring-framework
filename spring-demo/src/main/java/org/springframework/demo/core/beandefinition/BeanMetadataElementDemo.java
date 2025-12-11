@@ -54,5 +54,7 @@ public class BeanMetadataElementDemo {
 		public void hello() {
 			log.info("hello");
 		}
+
 	}
+
 }
