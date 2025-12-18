@@ -58,6 +58,7 @@ public class AttributeAccessorDemo {
 	}
 
 	public static class MyService {
+
 		public void hello() {
 			log.info("hello");
 		}

@@ -51,6 +51,7 @@ public class BeanMetadataElementDemo {
 	}
 
 	public static class MyService {
+
 		public void hello() {
 			log.info("hello");
 		}
