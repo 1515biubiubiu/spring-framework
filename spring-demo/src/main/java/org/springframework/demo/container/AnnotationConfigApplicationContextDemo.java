@@ -45,11 +45,6 @@ public final class AnnotationConfigApplicationContextDemo {
 
 		// 关闭容器。
 		context.close();
-
-		System.out.println("Bootstrap: " + String.class.getClassLoader());
-		System.out.println("Platform: " + ClassLoader.getPlatformClassLoader());
-		System.out.println("Application: " + ClassLoader.getSystemClassLoader());
-
 	}
 
 }
