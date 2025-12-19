@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.demo.container;
+package org.springframework.demo.core.container;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
