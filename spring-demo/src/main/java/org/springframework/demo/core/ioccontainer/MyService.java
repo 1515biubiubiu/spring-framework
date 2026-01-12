@@ -14,21 +14,21 @@
  * limitations under the License.
  */
 
-package org.springframework.demo.core.container;
+package org.springframework.demo.core.ioccontainer;
 
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
 
 /**
- * 配置类。
+ * 一个简单的服务 Bean。
  * @author dsy
  */
-@Configuration
-public class AppConfig {
+public class MyService {
 
-	@Bean
-	public MyService myService() {
-		return new MyService();
+	private static final Log log = LogFactory.getLog(MyService.class);
+
+	public void doSomething() {
+		log.info("MyService 执行方法 doSomething()");
 	}
 
 }

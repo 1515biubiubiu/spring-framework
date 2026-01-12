@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.demo.core.beandefinition;
+package org.springframework.demo.core.ioccontainer.beandefinition;
 
 import java.util.HashMap;
 import java.util.Map;

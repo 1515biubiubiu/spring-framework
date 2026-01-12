@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.springframework.demo.core.container;
+package org.springframework.demo.core.ioccontainer;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
