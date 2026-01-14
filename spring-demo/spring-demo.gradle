@@ -25,4 +25,6 @@ dependencies {
     implementation(project(":spring-webflux"))
     implementation(project(":spring-webmvc"))
     implementation(project(":spring-websocket"))
+
+    optional("jakarta.servlet:jakarta.servlet-api")
 }
